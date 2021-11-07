@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPULSE || YOUR GUARD </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/teestyles.css"> 
+    <link rel="stylesheet" href="mdi/css/materialdesignicons.css">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/hover.css">
+</head>
+<style>
+    .mySlides {display:none}
+    .w3-left, .w3-right, .w3-badge {cursor:pointer}
+    .w3-badge {height:13px;width:13px;padding:0}
+    </style>
+<body>
+ 
+    <div class="bgBlack padNAV fixed wid100 zeroMargin deskTop marginBottomsm Zindex">
+        <div class="wid90 blockCenter"><br>
+            <div class="floatLeft flex wid20 ">
+                <img src="img/Impulse logo.png" alt="" class="navImg hvr-wobble-vertical">
+                <h6 class="linehigt10 fontSize1 marginTopMinus1">IMPULSE SECURITY SERVICES LIMITED</h6>
+            </div>
+            <ul class="flex floatRight wid25 ulPointer deskTop" style="list-style: none; font-size: 14px;">
+                <li class="hvr-grow">Home</li>
+                <li class="hvr-grow">Services</li>
+                <li class="hvr-grow" id="about">About Us</li>
+                <li class="hvr-grow" onclick="location.href='products.html'">Products</li>
+            </ul>
+        </div>
+        <div class="absolute wid12 padSmallTwoReverse bgOp" id="aboutNav">
+            <ul>
+                <li onclick="location.href='about.html'">About Us<hr></li> 
+                <li onclick="location.href='mission.html'">Mission Statement <hr></li> 
+                <li onclick="location.href='vision.html'">Vision Statement <hr></li> 
+                <li onclick="location.href='value.html'">Value<hr></li> 
+            </ul>
+        </div>
+   </div>
+   <div class="bgBlack fixed wid100 zeroMargin mobile marginBottomsm Zindex">
+    <div class="wid90 blockCenter"><br>
+        <div class="floatLeft flex wid50">
+            <img src="img/Impulse logo.png" alt="" class="navImg">
+            <h6 class="linehigt10 smallerFont marginTopMinus1">IMPULSE SECURITY SERVICES LIMITED</h6>
+        </div>
+      <span class="mdi mdi-menu floatRight wid15 ulPointer mobile white biggerFont " id="closeBtn"></span>  
+    </div>
+    <br><br><br><br>
+    <div class="navModal  mobile" id="navModal" style="display: none;">
+        <ul>
+        <li>Home</li><br>
+        <li id="productBtn" >Services</li><br>
+        <li id="aboutMobile">About us</li><br>
+        <li onclick="location.href='products.html'">Products</li><br>
+        </ul>
+
+      </div>
+      <div class="absolute Left wid50 padSmallTwoReverse mobile bgOp" id="aboutNavMobile" style="z-index: 10; top: 200%; left: 30%; display: none;">
+        <ul >
+            <li onclick="location.href='about.html'">About Us<br><br></li> 
+            <li onclick="location.href='mission.html'">Mission Statement <br><br></li> 
+            <li onclick="location.href='vision.html'">Vision Statement <br><br></li> 
+            <li onclick="location.href='value.html'">Value</li> 
+        </ul>
+    </div>
+</div>
+   <br><br>
+    <div class="w3-content w3-display-container" style="max-width:100%">
+        <div class=" mySlides bgNavs relative w3-animate-left">
+            <br><br><br><br><br><br>
+                 <div class="blockCenter wid60">
+                  <div class="leftText "> <br><br><br>
+                      <h2 class="fontSize3Big fontSizeOneMobile boldestxx wid70 yellowOne">
+                         <strong><b> STAY SAFE <br> WITH IMPULSE </b></strong>           
+                      </h2>
+                      <h3 class="fontSizeBig white fontSize0Mobile">Let’s keep tabs on you and your valuable assets!</h3>
+                     
+                 </div>
+              </div>
+              </div>
+              <div class=" mySlides  bgNavsSecond relative w3-animate-right">
+                <br><br><br><br><br><br>
+                     <div class="blockCenter wid60">
+                      <div class="leftText"> <br><br><br>
+                        <h2 class="fontSize3Big boldestxx fontSizeOneMobile wid50Mobile wid70 yellowOne ">
+                            <strong><b> REST. EVEN <br> WHILE AT REST </b></strong>           
+                         </h2>
+                         <h3 class="fontSizeBig white fontSize0Mobile">With Impulse security , your family and property is at peace</h3>
+                                     
+                     </div>
+                  </div>
+                  </div>
+        <!-- <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+          <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+          <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div> -->
+      </div>
+    <!--<div class="bgWhite wid96 padSmall">-->
+    <!--    <h2 class="centerText black boldest fontSize2Big" >An Emergency? Hit the Button Below!</h2>-->
+    <!--    <button class="btnCurved white blockCenter mediumFont bgRed">Emergency!</button>-->
+    <!--</div>-->
+    <div class="wid70 blockCenter" style="display: none;">
+        <div class="flexWrap centerJustification" id="productDisplay">
+     
+       </div><br>
+       <button class="blockCenter  btnCurved mediumFont white bgBlack" style="display: none;" onclick="location.href='products.html'">See more</button>
+    </div>
+    <div class="wid70 wid50Mobile blockCenter"><br>
+        <!-- <h3 class="black centerText bigFont marginTopMinus1 linehigt0 boldest">Welcome to Impulse Security</h3> -->
+        <h4 class="centerText smallFont lighterFont greyThree">Impulse Security Ltd, providing 24/7 Security Services for clients accross industries. Our officers are locally employed. Lincensed by Nigeria Security and Civil Defence Corps, vetted to undergo dynamic selection processes, ensuring a high level of security services and protection for your property. With a high standard of uniform and distinctive turnout, we're a cut above our competitors.
+            <br>
+            <br> 
+          <strong>EQUIP YOUR SITE WITH PROTECTION AND DETERRENCE WITH A SECURITY OFFICER IN UNIFORM FROM IMPULSE SECURITY SERVICES LTD.</strong> </h4>
+       <br>
+    </div>
+    <div class="bgWhite">
+
+      <div class="wid70 blockCenter padSmall wid50Mobile">
+        <div class="flex flexWrap centerJustification centerText">
+            <div class="wid20 wid20Mobile blockCenterMobile hvr-grow" style="margin-bottom: 40px;">
+                <div class=" leftText zeroMargin ">
+                        <img src="img/mission (2).jpg" alt="" class="wid100 zeroMargin">
+                        <h2 class="blueOne mediumFont boldest">Mission Statement </h2>
+                        <small class="fontSize0 fontSize0Mobile marginTopMinus">
+                            First response is the professional hand-on 
+                            security company to provide On-site Security 
+                            Services to your location.<span class="hideShow" id="hideShow">...</span>
+                            <span id="showHide"> Our reputation has 
+                                been built around raising the industry 
+                                standard and creating a service catering to reach 
+                            client's specific needs. From the hiring process to the client's relationship, we take pride in our
+                            ability to exceed our client's expectations and surpass the services of our competitors. With the first
+                            week of signing a contract with First Response, you will see an influx in communication 
+                            as we put forth the effort to get all items in order prior to start date</span>
+                        </small>
+                        <button class="wid100 padSmall2 boldest btnOne bgYellowOne blueOne  marginTopsmPer0" id="readMoreOne" data="on">Read more <span class="mdi" id="moreIcon"></span></button>
+                    </div>
+            </div>
+            <div class=" wid20 marginLeftLittle3 wid20Mobile blockCenterMobile hvr-grow" style="margin-bottom: 40px;">
+                <div class="leftText zeroMargin">
+                    <img src="img/vision.jpeg" alt="" class="wid100">
+                        <h2 class="blueOne mediumFont boldest">Vision Statement
+                        </h2>
+                        <small class="fontSize0 fontSize0Mobile marginTopMinus">
+                            Through our commitment to high standards,
+                            it is our vision to provide to our clients, by
+                            investing in and developing our most 
+                             <span id="hideShowVision">...</span>
+                            <span class="" id="showHideVision">important assets, our staff, to earn the trust 
+                                of our clients by delivering the best quality services in line with 
+                                Nigeria Security and Civil Defence Corps drive.
+                                </span>
+                        </small>
+                        <button class="wid100 padSmall2 btnOne boldest bgYellowOne blueOne marginTopsmPer0" id="readMoreVision">Read more</button>
+                    </div>
+            </div> <br><br>
+            <div class=" wid20 marginLeftLittle3 wid20Mobile blockCenterMobile hvr-grow" >
+                <div class=" leftText zeroMargin">
+                    <img src="img/value.png" alt="" class="wid100">
+                        <h2 class="blueOne boldest mediumFont"> Core Values </h2>
+                        <small class="fontSize0 fontSize0Mobile marginTopMinus">
+                            Impulse Security's main focus is to protect
+                            what matters most to your company. Impulse
+                            security's integrated approach to products 
+                            <span id="hideShowValue">...</span>  
+                            <span id="showHideValue">and services ensure that we provide a total 
+                                electronic, manned and physical security solution.
+                                We are committed to this values and believe that, by maintaining these values, we will 
+                                lead Impulse Security to further success in the future. Impulse Security ensures that 
+                                everyone in our organisation is treated with respect and dignity, appreciating individual 
+                                characteristics as well as cultural diversity. 
+                                As a company and as individuals, we value above all else honesty, integrity, 
+                                mutual respect, unselfishness and professionalism. For our staff, we offer a rewarding
+                                and challenging environment where personal development can flourish. We hold
+                                ourselves accountable to our clients, staff and partners by honoring our commitments,
+                                providing results and continually striving to provide the highest quality security services</span>                          
+                                <button class="wid100 padSmallBig btnOne boldest bgYellowOne blueOne marginTopsmPer0" id="readMoreValue">Read more</button>
+                            </div>
+            </div>
+        </div>
+        </div>
+        <br><br><br>    
+        <h1 class="black centerText bigFont marginTopMinus1 linehigt0 boldest ">Why Choose Us?</h1><br><br>
+        <div class="wid50 wid50Mobile blockCenter ">
+            <div class="wid100  fancyBoxLeft blockCenter fancyBorderLeftRed hvr-float "><br>
+               <h2 class="black  bigFont marginTopMinus1  boldest">Enhanced Human Resource</h2>
+               <small class="fontSize0Mobile">
+                One of the most important function we implement majorly to acquire an effective &
+                outstanding output from every personnel on and outside filed is our dedicated and
+                critical practice in personnel acquisition, development and termination.
+               </small>
+            </div><br><br>
+            <div class="wid100  fancyBoxLeft blockCenter fancyBorderLeftBlue hvr-grow"><br>
+                <h2 class="black  bigFont marginTopMinus1 linehigt10 boldest">Quality Management , Operational & Physical Training.</h2>
+                <small class="fontSize0Mobile">
+                One of the most important function we implement majorly to acquire an effective &...
+                </small>
+             </div><br><br>
+             <div class="wid100  fancyBoxLeft blockCenter fancyBorderLeftYellow hvr-sink"><br>
+                <h2 class="black  bigFont marginTopMinus1 linehigt0 boldest">Logistical Resource</h2>
+                <small class="fontSize0Mobile">
+                One of the most important function we implement majorly to acquire an effective &
+                outstanding output from every personnel on and outside filed is our dedicated and
+                critical practice in personnel acquisition, development and termination.
+                </small>
+             </div>
+        </div><br><br>
+        <div class="wid50 wid50Mobile blockCenter">
+            <div class="flexWrap centerJustification markMargin">
+            <div class="wid50 divs boxBorderSocials hvr-shrink">
+                <div class="demoIm">
+                    <img src="img/security2.jpeg" class="" alt="">
+                </div>
+                <div class="wid90 flex centerJustification">
+                <h1 class="marginLeftLittle3 black">Security Solutions</h1>
+                <button class="btnNone bgWhite"><img src="img/impArrow.PNG" alt="" class=""></button>
+                </div>
+            </div>
+            <div class="wid50 wid50Mobile marginLeftLittle1 divs boxBorderSocials hvr-shrink">
+                <div class="demoIm">
+                    <img src="img/training.jpeg" class="bgBlack autoSize" alt="">
+                </div>
+                <div class="wid90 flex centerJustification">
+                 <h1 class="marginLeftLittle3 wid50 black">Training</h1>
+                 <button class="btnNone bgWhite"><img src="img/impArrow.PNG" alt="" class=""></button>
+                </div>
+            </div>
+            <div class="wid50 wid50Mobile divs boxBorderSocials hvr-shrink">
+                <div class="demoIm">
+                    <img src="img/career.jpeg" class="bgBlack autoSize" alt="">
+                </div>
+                <div class="wid90 flex centerJustification">
+                 <h1 class="marginLeftLittle3 wid50 black">Career</h1>
+                 <button class="btnNone bgWhite"><img src="img/impArrow.PNG" alt="" class=""></button>
+                </div>
+            </div>
+            <div class="wid50 wid50Mobile marginLeftLittle1 divs boxBorderSocials hvr-shrink">
+                <div class="demoIm">
+                    <img src="img/industry2.jpeg" class="bgBlack autoSize" alt="">
+                </div>
+                <div class="wid90 flex centerJustification">
+                 <h1 class="marginLeftLittle3 wid50 black">Industrial Security</h1>
+                 <button class="btnNone bgWhite"><img src="img/impArrow.PNG" alt="" class=""></button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <br><br>
+        <h1 class="bigFont boldest black centerText">Our Clients</h1>
+        <div class="flex flexWrap centerJustification">
+            <img src="img/Impulse logo.png" alt="" class="navImg1 hvr-bob">
+            <img src="img/Impulse logo.png" alt="" class="navImg1 marginLeftLittle3 hvr-bob">
+            <img src="img/Impulse logo.png" alt="" class="navImg1 marginLeftLittle3 hvr-bob">
+            <img src="img/Impulse logo.png" alt="" class="navImg1 marginLeftLittle3 hvr-bob">
+            <img src="img/Impulse logo.png" alt="" class="navImg1 marginLeftLittle3 hvr-bob">
+            <img src="img/Impulse logo.png" alt="" class="navImg1 marginLeftLittle3 hvr-bob">
+            <img src="img/Impulse logo.png" alt="" class="navImg1 marginLeftLittle3 hvr-bob">
+        </div>
+      </div>
+    </div>
+    <div class="wid100 bgBlueOne higt70px"  >
+       <div class="wid70 wid50Mobile blockCenter flex   ">
+           <h1 class="floatLeft fontSize0Mobile">Download our Corporate Brochure! </h1>
+           <h1 class="btnCurved white  mediumFont bgYellowOne floatRight " >Download!</h1>
+       </div> 
+    </div>
+    <footer class="bgBlack wid100">
+        <br><br><br><br>
+        <div class="flex  flexWrap centerJustification">
+         <div class="wid60">
+            <div class=" flex wid50 wid20Mobile marginLeftLittle10">
+                <img src="img/Impulse logo.png" alt="" class="navImg1">
+                <h6 class="linehigt10 fontSize2 marginTopMinus1"><br> IMPULSE SECURITY SERVICES LIMITED</h6>
+            </div><br><br><br>
+            <div class="wid50 marginLeftLittle10 wid20Mobile">
+                 <small class="white smallFont">
+                Address: No.6 Adeshina street, off Obafemi Awolowo Way. Ikeja. Lagos
+                    <!-- Abuja: Lorem Ipsum Ipsum Lorem Lorem! -->
+                </small><br><br><br>
+                <small class="white smallFont">
+                    Tel:- <a href="tel:+2348033083969" class="white ">08033083969</a><br><br>
+                    Email:- <a href="mailto: info@impulsesecurityng.com" class="white ">info@impulsesecurityng.com</a>
+                </small>
+     
+            </div>
+         </div>
+         <div class="wid50 marginLeftLittle10 wid20Mobile marginLeftLittle10Mobile">
+            <div class="wid70 wid100Mobile">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3963.3852685403012!2d3.3432835161425256!3d6.598949225702542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shttps%3A%2F%2Fwww.google.com%2Fmaps%2Fplace%2F6%2BAdeshina%2BSt%2C%2BAllen%2B101233%2C%2BIkeja%2F%406.5989455%2C3.3448147%2C17z%2Fdata%3D*214m2*213m1*211s0x103b9225f6a69221%3A0x9d30823b12c3631%3Fhl%3Den-US!5e0!3m2!1sen!2sng!4v1632674971471!5m2!1sen!2sng" class="wid100 borderRA4" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+         </div>
+        </div>
+
+
+        <br><br><br>
+        <div class="blockCenter wid20 wid20Mobile">
+            <small class="white centerText wid25 wid20Mobile">&copy; All Rights Designed by FIBE ARENA</small>
+        </div><br><br>
+    </footer>
+
+</body>
+
+<script src="js/jquery.js"></script>
+<script>
+
+// var slideIndex = 1;
+// showDivs(slideIndex);
+
+// function plusDivs(n) {
+//   showDivs(slideIndex += n);
+// }
+
+// function currentDiv(n) {
+//   showDivs(slideIndex = n);
+// }
+
+// function showDivs(n) {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("demo");
+//   if (n > x.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = x.length}
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";  
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" w3-white", "");
+//   }
+//   x[slideIndex-1].style.display = "block";  
+//   dots[slideIndex-1].className += " w3-white";
+// }
+
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 6000); // Change image every 2 seconds
+}
+
+
+
+
+
+
+
+
+
+
+    $(document).ready(function () {
+        $("#showHide").hide()
+        $("#showHideVision").hide()
+        $("#showHideValue").hide()
+        $("#aboutNav").hide() 
+     $("#readMoreOne").click(()=>{
+        $("#showHide").animate(
+            {
+                height : "toggle"
+            } , "fast"
+        );
+        $("#hideShow").toggle();
+        $("#moreIcon").toggleClass("mdi-apple-keyboard-control")
+
+        $("#readMoreOne").html( () => {
+            $("#readMore").html() === "Read less" ? "Read More" : "Read Less"
+        })  
+     })
+
+
+     $("#readMoreVision").click(()=>{
+        $("#showHideVision").animate(
+            {
+                height : "toggle"
+            } , "fast"
+        );
+        $("#hideShowVision").toggle();         
+     })
+
+
+     $("#readMoreValue").click(()=>{
+        $("#showHideValue").animate(
+            {
+                height : "toggle"
+            } , "fast"
+        );
+        $("#hideShowValue").toggle();         
+     })
+
+
+     $("#about").on("click" ,() => {
+         $("#aboutNav").animate({
+             height : "toggle"
+         } , "fast")
+     })
+
+
+     $(document).ready(function () {
+         var p_n = 1
+        $.ajax({
+            url : "controller.php",
+            type : "POST",
+            data : { pageNum : p_n , show : "show" , itemCount : 2 },
+            success : function (data) {
+                $("#productDisplay").html(data)
+            }
+        })
+    })
+    $("#closeBtn").click(()=> {
+    $("#navModal").animate({
+        height : "toggle",
+    } , 
+    "fast" ) 
+    $("#navModal").show()
+    $("#aboutNavMobile").hide()
+    $("#closeBtn").toggleClass("mdi-menu mdi-close")
+   })
+   $("#aboutMobile").click(()=>{
+      $("#aboutNavMobile").toggle()
+     })
+    })
+</script>
+</html>

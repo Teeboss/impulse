@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impulse || Your guard</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:wght@500&display=swap' rel='stylesheet'>  
+    <link rel="stylesheet" href="../../css/teestyles.css"> 
+    <link rel="stylesheet" href="../../mdi/css/materialdesignicons.css">
+</head>
+<style>
+    img {
+        border-radius: 4px;
+        width: 93px;
+        height: auto;
+        margin-left: 4px;
+    }
+</style>
+<body>
+
+
+    <div class="bgBlack padNAV fixed wid100 zeroMargin deskTop marginBottomsm Zindex">
+        <div class="wid90 blockCenter"><br>
+            <div class="floatLeft flex wid20">
+                <img src="../../img/Impulse logo.png" alt="" class="navImg">
+                <h6 class="linehigt10 fontSize1 marginTopMinus1">IMPULSE SECURITY SERVICES LIMITED</h6>
+            </div>
+            <ul class="flex floatRight wid25 ulPointer deskTop" style="list-style: none; font-size: 14px;">
+                <li onclick="location.href = 'upload.html'">Add a Product</li>
+                <li>Guards & Staffs</li>
+                <li>Sign out</li>
+            </ul>
+        </div>
+        <div class="absolute wid12 padSmallTwoReverse bgOp none" id="aboutNav">
+            <ul>
+                <li onclick="location.href='about.html'">About Us<hr></li> 
+                <li onclick="location.href='mission.html'">Mission Statement <hr></li> 
+                <li onclick="location.href='vision.html'">Vision Statement <hr></li> 
+                <li onclick="location.href='value.html'">Value<hr></li> 
+            </ul>
+        </div>
+   </div>
+   <div class="bgBlack fixed wid100 zeroMargin mobile marginBottomsm Zindex">
+    <div class="wid90 blockCenter"><br>
+        <div class="floatLeft flex wid50">
+            <img src="../../img/Impulse logo.png" alt="" class="navImg">
+            <h6 class="linehigt10 smallerFont marginTopMinus1">IMPULSE SECURITY SERVICES LIMITED</h6>
+        </div>
+      <span class="mdi mdi-menu floatRight wid15 ulPointer mobile white biggerFont " id="closeBtn"></span>  
+    </div>
+    <br><br><br><br>
+    <div class="navModal  mobile" id="navModal" style="display: none;">
+        <ul>
+            <li onclick="location.href = 'upload.html'">Add a Product</li><br>
+            <li >Guards & Staffs</li><br>
+            <li >Sign out</li><br>
+        </ul>
+
+      </div>
+</div><br><br><br><br>
+   <div class="wid30 blockCenter centerText wid20Mobile">
+     <h3>Manage Products</h3>
+    <button class="DebancoBtn1 wid100" id="modal1"><span class="mdi mdi-plus"></span></button>
+    <button class="DebancoBtn2 wid100" id="modalTwo">Edit a Product</button>
+    <button class="DebancoBtn3 wid100">Delete a product</button>
+   </div>
+   <div class="modal" id="modal">
+        <div class="modalContent blockCenter centerText wid30 wid20Mobile">
+          <h3>Upload a Product</h3>  <br><br>
+          <span class="mdi mdi-close absolute biggerFont socialColorDeep modalClose" id="modalClose"></span>
+          <div id="preview"></div>
+          <form id="form" method="post" enctype="multipart/form-data">
+          <input id="file-input" name="files[]" type="file" class=" debanInput wid90" accept="image/*" multiple>
+          <input type="text" placeholder="Product title" name="productTitle" class=" debanInput wid90" required>
+          <input type="text" placeholder="Product type" name="productType" class=" debanInput wid90" required>
+          <textarea name="description" id="" cols="30" rows="10" placeholder="Description"  class=" debanInput wid90" required></textarea>
+          <input type="text" placeholder="price" name="price" class=" debanInput wid90" required> <br><br>
+          <button class="DebancoBtn4 wid30 wid20Mobile" id="submitBtn">Submit</button>
+          </form>
+        </div><br><br><br><br><br><br>
+    </div>
+    <div class="modal " id="modalEdit">
+        <div class="modalContent blockCenter centerText wid60 wid20Mobile">
+          <span class="mdi mdi-close absolute biggerFont socialColorDeep modalClose" id="modalCloseTwo"></span>
+          <div id="preview"></div>
+          <div class="blockCenter wid90 wid50Mobile centerText">
+            <h1 class="boldest bigFont mediumFontMobile black">Edit your Products</h1>
+            <table class="mediumFontMobile blockCenterMobile">
+                <thead>
+                    <tr>
+                        <th>Product Title</th>
+                        <th>Product Type</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody  id="tableProducts" >
+                </tbody>
+           </table>
+        </div> 
+        </div><br><br><br><br><br><br>
+    </div>
+</body>
+<script src="../../js/jquery.js"></script>
+<script src="modal.js"></script>
+<script>
+ $(document).ready(()=> {
+    $("#form").submit(function (e) {
+        e.preventDefault()
+        $.ajax({
+            url:"../../controller.php",
+            type: "POST",
+            data: new FormData(document.getElementById("form")),
+            processData: false,
+            cache: false,
+            contentType: false,
+            error: function (params) {
+                alert("error connecting to the servers ")          
+            },
+            beforeSend: () => {
+                $("#submitBtn").html("<span class='mdi mdi-loading mdi-spin'>Uploading</span>")
+            } , 
+            success: function (data) {
+                alert('product uploaded successfully')
+                location.reload()
+            }
+        })
+    })
+    $("#closeBtn").click(()=> {
+    $("#navModal").animate({
+        height : "toggle",
+    } , 
+    "fast" ) 
+    $("#navModal").show()
+    $("#aboutNavMobile").hide()
+     $("#closeBtn").toggleClass("mdi-menu mdi-close")
+   })
+   $("#aboutMobile").click(()=>{
+      $("#aboutNavMobile").toggle()
+     })
+ })
+   $("#modalTwo").click(()=> {
+       $("#modalEdit").toggle()
+   })
+   $("#modalCloseTwo").click(()=> {
+       $("#modalEdit").toggle()
+   })
+   $.ajax({
+       url : "../../controllerTwo.php",
+       type: "POST",
+       data : {products : "products"},
+       success: function (data) {
+           $("#tableProducts").html(data)
+       }
+   })
+</script>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPULSE || YOUR GUARD </title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>  
+    <link rel="stylesheet" href="../../css/teestyles.css">
+    <link rel="stylesheet" href="../../mdi/css/materialdesignicons.css"> 
+</head>
+<body>
+
+
+    <div class="bgBlack padNAV fixed wid100 zeroMargin deskTop marginBottomsm Zindex">
+        <div class="wid90 blockCenter"><br>
+            <div class="floatLeft flex wid20">
+                <img src="../../img/Impulse logo.png" alt="" class="navImg">
+                <h6 class="linehigt10 fontSize1 marginTopMinus1">IMPULSE SECURITY SERVICES LIMITED</h6>
+            </div>
+            <ul class="flex floatRight wid25 ulPointer deskTop" style="list-style: none; font-size: 14px;">
+                <li onclick="location.href = 'upload.html'">Add a Product</li>
+                <li>Guards & Staffs</li>
+                <li>Sign out</li>
+            </ul>
+        </div>
+        <div class="absolute wid12 padSmallTwoReverse none bgOp" id="aboutNav">
+            <ul>
+                <li onclick="location.href='about.html'">About Us<hr></li> 
+                <li onclick="location.href='mission.html'">Mission Statement <hr></li> 
+                <li onclick="location.href='vision.html'">Vision Statement <hr></li> 
+                <li onclick="location.href='value.html'">Value<hr></li> 
+            </ul>
+        </div>
+   </div>
+   <div class="bgBlack fixed wid100 zeroMargin mobile marginBottomsm Zindex">
+    <div class="wid90 blockCenter"><br>
+        <div class="floatLeft flex wid50">
+            <img src="../../img/Impulse logo.png" alt="" class="navImg">
+            <h6 class="linehigt10 smallerFont marginTopMinus1">IMPULSE SECURITY SERVICES LIMITED</h6>
+        </div>
+      <span class="mdi mdi-menu floatRight wid15 ulPointer mobile white biggerFont " id="closeBtn"></span>  
+    </div>
+    <br><br><br><br>
+    <div class="navModal  mobile" id="navModal" style="display: none;">
+        <ul>
+            <li onclick="location.href = 'upload.html'">Add a Product</li><br>
+            <li >Guards & Staffs</li><br>
+            <li >Sign out</li><br>
+        </ul>
+
+      </div>
+</div>
+<br><br><br><br><br><br>
+    <div class="centerText wid100 ">
+      <div class="blockCenter wid50 wid50Mobile">
+         <h1 class="boldest black bigFont">Add Guard</h1>
+         <button class=" btnCurved white blockCenter bgArmyGreen padSmallTwo wid60 higtSixPx"  id="modal1"><span class="mdi mdi-plus bigFont"></span></button>
+      </div>
+    </div>
+    <div class="centerText wid100 wid50Mobile blockCenter">
+       <div class="blockCenter wid90 wid50Mobile centerText">
+           <h1 class="boldest bigFont mediumFontMobile black">Guards on Duty</h1>
+           <table id="tableGuards" class="mediumFontMobile blockCenterMobile">
+
+          </table>
+       </div> 
+    </div>
+ 
+    <!-- <footer class="bgBlack wid100">
+        <br><br><br><br>
+        <div class="floatLeft flex wid25 marginLeftLittle3">
+            <img src="img/Impulse logo.png" alt="" class="navImg1">
+            <h6 class="linehigt10 fontSize2 marginTopMinus1"><br> IMPULSE SECURITY SERVICES LIMITED</h6>
+        </div><br><br><br>
+        <div class="wid22 marginLeftLittle10">
+            <small class="white">
+                Office Address: <br><br>
+                Lagos: Lorem Ipsum Lorem Lorem Lorem!
+                Abuja: Lorem Ipsum Ipsum Lorem Lorem!
+            </small><br><br><br>
+            <small class="white">
+                Tel:- <br><br>
+                Lagos: Lorem Ipsum Lorem Lorem Lorem!
+                Abuja: Lorem Ipsum Ipsum Lorem Lorem!
+            </small>
+        </div><br><br><br>
+        <div class="blockCenter wid20">
+            <small class="white centerText wid25">&copy; All Rights Designed by FIBE ARENA</small>
+        </div><br><br>
+    </footer> -->
+    <div class="modal" id="modal">
+        <div class="modalContent blockCenter centerText wid30 wid50Mobile">
+          <h3>Add a guard</h3>  <br><br>
+          <span class="mdi mdi-close absolute biggerFont socialColorDeep modalClose" id="modalClose"></span>
+          <div id="preview"></div>
+          <form id="form" method="post" enctype="multipart/form-data">
+          <input type="text" placeholder="Full name" name="fname" class="debanInput wid90" required>
+          <input type="text" placeholder="post/office" name="posts" class=" debanInput wid90" required>
+          <button class="DebancoBtn4 wid20" id="submitBtn">Submit</button>
+          </form>
+        </div><br><br><br><br><br><br>
+    </div>
+</body>
+
+<script src="../../js/jquery.js"></script>
+<script src="modal.js"></script>
+<script>
+$(document).ready(()=> {
+    $.ajax({
+            url:"../../controller.php",
+            type: "POST",
+            data: {guard : "guard"},
+            success: function (data) {
+                $("#tableGuards").append(data)
+            }
+        })
+    $("#form").submit(function (e) {
+        e.preventDefault()
+        $.ajax({
+            url:"../../controller.php",
+            type: "POST",
+            data: new FormData(document.getElementById("form")),
+            processData: false,
+            cache: false,
+            contentType: false,
+            error: function (params) {
+                alert("error connecting to the servers ")          
+            },
+            success: function (data) {
+                location.reload()
+            }
+        })
+    })
+    $("#closeBtn").click(()=> {
+    $("#navModal").animate({
+        height : "toggle",
+    } , 
+    "fast" ) 
+    $("#navModal").show()
+    $("#aboutNavMobile").hide()
+     $("#closeBtn").toggleClass("mdi-menu mdi-close")
+   })
+   $("#aboutMobile").click(()=>{
+      $("#aboutNavMobile").toggle()
+     })
+ })
+</script>
+</html>

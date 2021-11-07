@@ -1,0 +1,172 @@
+* {
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.filter {
+    position: relative; 
+    width:50%; 
+    z-index: 4;
+    outline: none; 
+    border: none;
+    background: none;
+    background-image: none;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: left;
+    margin: 2px;
+    border-bottom: 1px solid #acacac;
+    }
+    .filterPas {
+       position: relative; 
+       width:50%; 
+       z-index: 4;
+       outline: none; 
+       border: none;
+       background: none;
+       background-image: none;
+       background-size: 15px;
+       background-repeat: no-repeat;
+       background-position: left;
+       margin: 2px;
+       border-bottom: 1px solid #acacac;
+       }
+.placeholder {
+      position: absolute;
+      background-color: none; 
+      top: 255px;
+      left: 440px;
+      font-size: 18px;
+      padding: 0 20px; 
+      transition: all 0.3s ease;
+   }
+   .placeholder2 {
+       position: absolute;
+       top: 385px;
+       margin-left: -245px;
+       font-size: 18px;
+       padding: 0 20px; 
+       transition: all 0.3s ease;
+    }
+ .filter:focus ~ .placeholder,
+  .filter:not(:focus):required:valid ~ .placeholder {
+       font-size: 13px;
+       top: 235px; 
+       color: black;
+   }
+   .filter:focus:required:valid
+   {
+       background-image: url("./mail.png");
+       text-indent: 0px;
+   }
+   .filter:not(:focus) {
+       background-image: none;
+       text-indent: 19px;
+   }
+   .filter:focus ~ .placeholder2,
+   .filter:valid ~ .placeholder2 {
+        font-size: 12px;
+        top: 335px; 
+        color: black;
+    }
+
+    
+ 
+
+
+    .filterPas:focus ~ .placeholder,
+    .filterPas:not(:focus):required:valid ~ .placeholder {
+         font-size: 12px;
+         top: 295px; 
+         color: black;
+     }
+     .filterPas:focus:required:valid
+     {
+         text-indent: 0px;
+     }
+     .filterPas:not(:focus) {
+         background-image: none;
+         text-indent: 0px;
+     }
+     .filterPas:focus ~ .placeholder2,
+     .filterPas:valid ~ .placeholder2 {
+          font-size: 12px;
+          top: 350px; 
+          color: black;
+      }
+
+@media screen and (max-width : 700px){ 
+    .filter {
+        width: 90%;
+    }
+    .filterPas {
+        width: 90%;
+    }
+    .placeholder {
+        position: absolute;
+        background-color: white; 
+        top: 175px;
+        left: 50%;
+        font-size: 15px;
+        padding: 0 20px; 
+        margin-left: -50%;
+        transition: all 0.3s ease;
+        }
+    .filter:focus ~ .placeholder,
+    .filter:not(:focus):required:valid ~ .placeholder {
+        font-size: 12px;
+        top: 150px; 
+        color: black;
+    }
+    .filter:focus:required:valid
+    {
+        background-image: url("./mail.png");
+        text-indent: 0;
+    }
+    .filter:not(:focus) {
+        background-image: none;
+        text-indent: 0;
+    }
+
+
+
+
+    .filterPas:focus ~ .placeholder,
+    .filterPas:not(:focus):required:valid ~ .placeholder {
+        font-size: 12px;
+        top: 240px; 
+        color: black;
+    }
+    .filterPas:focus:required:valid
+    {
+        text-indent: 0px;
+    }
+    .filterPas:not(:focus) {
+        background-image: none;
+        text-indent: 0px;
+    }
+        .placeholder2 {
+        position: absolute;
+        background-color: white; 
+        top: 300px;
+        margin-left: -182px;
+        font-size: 15px;
+        padding: 0 20px; 
+        transition: all 0.3s ease;
+        }
+
+        
+        .filter:focus ~ .placeholder2,
+        .filter:not(:focus):required:valid ~ .placeholder2 {
+            font-size: 12px;
+            top: 280px; 
+            color: black;
+        }
+        
+
+        .filterPas:focus ~ .placeholder2,
+        .filterPas:not(:focus):required:valid ~ .placeholder2 {
+            font-size: 12px;
+            top: 280px; 
+            color: black;
+        }
+        
+}
